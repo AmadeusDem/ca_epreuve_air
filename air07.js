@@ -72,8 +72,9 @@ const insertInSortedArray = (sortedArray, elementToInsert) => {
 // Handling errors
 handlingErrorsInArguments(args);
 // Parsing
-
+const sortedArray = args.slice(2, -1);
+const elementToInsert = args.slice(-1)[0];
 // Solving problem
-const result = insertInSortedArray([1, 3, 4], 10);
+const result = insertInSortedArray(sortedArray, elementToInsert);
 // Printing result
 console.log(result);
