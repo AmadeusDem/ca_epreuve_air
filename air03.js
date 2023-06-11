@@ -43,4 +43,6 @@ const inputs = args.slice(2);
 // Solving problem
 const result = findMissingPeers(inputs);
 // Printing result
-console.log(result);
+for (element of result) {
+  console.log(element);
+}
