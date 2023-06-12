@@ -47,4 +47,6 @@ const userInputs = args.slice(2);
 // Solving problem
 const result = rotateAnArrayToTheLeft(userInputs);
 // Printing result
-console.log(result);
+for (element of result) {
+  console.log(element);
+}

@@ -77,4 +77,6 @@ const elementToInsert = args.slice(-1)[0];
 // Solving problem
 const result = insertInSortedArray(sortedArray, elementToInsert);
 // Printing result
-console.log(result);
+for (element of result) {
+  console.log(element);
+}

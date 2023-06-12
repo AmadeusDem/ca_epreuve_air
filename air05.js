@@ -51,9 +51,9 @@ const addOrSubstractOnEachElement = (
 ) => {
   const numbers = numbersArray.map((number) => {
     if (operator === "+") {
-      return parseInt(number) + numberToAddOrSubstract;
+      return parseInt(number) + parseInt(numberToAddOrSubstract);
     } else if (operator === "-") {
-      return parseInt(number) - numberToAddOrSubstract;
+      return parseInt(number) - parseInt(numberToAddOrSubstract);
     } else {
       return number;
     }
@@ -78,4 +78,6 @@ const result = addOrSubstractOnEachElement(
 );
 
 // Printing result
-console.log(result);
+for (element of result) {
+  console.log(element);
+}

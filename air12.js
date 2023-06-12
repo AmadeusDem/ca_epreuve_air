@@ -57,4 +57,6 @@ const arrayToSort = args.slice(2).map((element) => parseInt(element));
 // Solving problem
 const result = quickSort(arrayToSort);
 // Printing result
-console.log(result);
+for (element of result) {
+  console.log(element);
+}

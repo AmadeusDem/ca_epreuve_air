@@ -57,4 +57,6 @@ const string = args.slice(-1)[0];
 // Solving problem
 const result = doesNotContainThisString(inputs, string);
 // Printing result
-console.log(result);
+for (element of result) {
+  console.log(element);
+}

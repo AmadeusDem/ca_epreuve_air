@@ -70,4 +70,6 @@ const [firstArray, secondArray] = handlingErrorsInArguments(args);
 // Solving problem
 const result = sortedFusion(firstArray, secondArray);
 // Printing result
-console.log(result);
+for (element of result) {
+  console.log(element);
+}
