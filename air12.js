@@ -53,7 +53,7 @@ const quickSort = (arrayToSort) => {
 // Handling errors
 handlingErrorsInArguments(args);
 // Parsing
-const arrayToSort = args.slice(2).map((element) => parseInt(element));
+const arrayToSort = args.slice(2).map((element) => parseFloat(element));
 // Solving problem
 const result = quickSort(arrayToSort);
 // Printing result
