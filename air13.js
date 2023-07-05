@@ -32,8 +32,6 @@ const fileExists = (fileName) => {
 };
 const testNodeProgramJs = (fileName, args, expectedOutput) => {
   const execResult = execSync(`node ${fileName} ${args}`).toString();
-  // console.log("\x1b[42m", execResult, "\x1b[0m");
-  // console.log("\x1b[42m", expectedOutput, "\x1b[0m");
   if (execResult === expectedOutput) {
     console.log("Test: \x1b[32m Success \x1b[0m\n");
     numberOfSuccess++;
@@ -61,11 +59,7 @@ testNodeProgramJs(
 // Air02
 fileName = "air02.js";
 fileExists(fileName);
-testNodeProgramJs(
-  fileName,
-  '"Je" "teste" "des" "trucs" " "',
-  "Je teste des trucs\n"
-);
+testNodeProgramJs(fileName, '"Je" "teste" "des" "trucs" " "', "Je teste des trucs\n");
 
 // Air03
 fileName = "air03.js";
@@ -75,11 +69,7 @@ testNodeProgramJs(fileName, '"1" "2" "3" "4" "5" "4" "3" "2" "1"', "5\n");
 // Air04
 fileName = "air04.js";
 fileExists(fileName);
-testNodeProgramJs(
-  fileName,
-  '"Hello milady,   bien ou quoi ??"',
-  "Helo milady, bien ou quoi ?\n"
-);
+testNodeProgramJs(fileName, '"Hello milady,   bien ou quoi ??"', "Helo milady, bien ou quoi ?\n");
 
 // Air05
 fileName = "air05.js";
@@ -89,11 +79,7 @@ testNodeProgramJs(fileName, '"1" "2" "3" "4" "5" "+2"', "3\n4\n5\n6\n7\n");
 // Air06
 fileName = "air06.js";
 fileExists(fileName);
-testNodeProgramJs(
-  fileName,
-  '"Michel" "Albert" "Therese" "Benoit" "t"',
-  "Michel\n"
-);
+testNodeProgramJs(fileName, '"Michel" "Albert" "Therese" "Benoit" "t"', "Michel\n");
 
 // Air07
 fileName = "air07.js";
@@ -103,11 +89,7 @@ testNodeProgramJs(fileName, '"1" "3" "4" "2"', "1\n2\n3\n4\n");
 // Air08
 fileName = "air08.js";
 fileExists(fileName);
-testNodeProgramJs(
-  fileName,
-  '"10" "20" "30" "fusion" "15" "25" "35"',
-  "10\n15\n20\n25\n30\n35\n"
-);
+testNodeProgramJs(fileName, '"10" "20" "30" "fusion" "15" "25" "35"', "10\n15\n20\n25\n30\n35\n");
 
 // Air09
 fileName = "air09.js";
@@ -133,6 +115,4 @@ fileName = "air12.js";
 fileExists(fileName);
 testNodeProgramJs(fileName, '"6" "5" "4" "3" "2" "1"', "1\n2\n3\n4\n5\n6\n");
 
-console.log(
-  `Total success: (${numberOfSuccess}/${numberOfFailures + numberOfSuccess})`
-);
+console.log(`Total success: (${numberOfSuccess}/${numberOfFailures + numberOfSuccess})`);
